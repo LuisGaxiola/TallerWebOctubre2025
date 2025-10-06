@@ -11,14 +11,13 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@nuxt/ui",
-    "@nuxt/icon",
+    "@nuxtjs/seo",
     "nuxt-typed-router",
     "@vueuse/nuxt",
-    "@nuxtjs/seo",
   ],
   icon: {
     serverBundle: {
-      collections: ["uil", "mdi"],
+      collections: ["uil", "mdi", "lucide"],
     },
   },
 
