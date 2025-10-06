@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker tag vsc-tallerweboctubre2025-59b95:devpod-21ef5c92742604fbd40e071c236c86c1 ghcr.io/luisgaxiola/vsc-tallerweboctubre2025-59b95:v1
+docker push ghcr.io/luisgaxiola/vsc-tallerweboctubre2025-59b95:v1

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+devpod up github.com/LuisGaxiola/TallerWebOctubre2025 --prebuild-repository ghcr.io/luisgaxiola/vsc-tallerweboctubre2025:devpod-21ef5c92742604fbd40e071c236c86c1

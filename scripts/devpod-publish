@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+devpod build --debug github.com/LuisGaxiola/TallerWebOctubre2025 --repository ghcr.io/luisgaxiola/vsc-tallerweboctubre2025 --provider docker
