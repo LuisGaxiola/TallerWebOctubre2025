@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../.."
+
+pwd
+
+mkdir -p generated
+python -m grpc_tools.protoc \
+  -I./proto \
+  --python_out=./main-py \
+  --grpc_python_out=./main-py \
+  ./proto/emotion_analysis.proto

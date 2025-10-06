@@ -5,6 +5,7 @@
 - Hono.js
 - Python
 - FastAPI
+- GRPC
 - PostgreSQL
 - Minio
 - Redis
@@ -17,9 +18,9 @@
 - Github CLI (recomendado)
 - Docker (recomendado)
 - Visual Studio Code y forks (recomendado)
-- Node.js v24
+- Node.js v22+
 - Bun (recomendado)
-- Python 3.13
+- Python 3.11+
 
 # Requerimientos - Dev Containers
 

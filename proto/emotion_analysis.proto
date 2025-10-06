@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package emotion;
+
+// Servicio de análisis de emociones
+service EmotionAnalyzer {
+  rpc AnalyzeEmotion (EmotionRequest) returns (EmotionResponse);
+}
+
+// Request con el texto a analizar
+message EmotionRequest {
+  string text = 1;
+}
+
+// Estructura de una emoción individual
+message Emotion {
+  string label = 1;
+  float intensity = 2;
+}
+
+// Response con el análisis completo
+message EmotionResponse {
+  string dominant = 1;
+  repeated Emotion emotions = 2;
+}
