@@ -12,6 +12,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "t3dotgg.vsc-material-theme-but-i-wont-sue-you",
                 "PKief.material-icon-theme",
                 "Vue.volar"
             ]
