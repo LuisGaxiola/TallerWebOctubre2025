@@ -44,10 +44,10 @@ const providers = [
 ];
 
 const schema = z.object({
-  email: z.email("Invalid email"),
+  email: z.email("Correo inválido"),
   password: z
-    .string("Password is required")
-    .min(8, "Must be at least 8 characters"),
+    .string("Se requiere una contraseña")
+    .min(8, "Debe ser de al menos 8 caracteres"),
 });
 
 type Schema = z.output<typeof schema>;

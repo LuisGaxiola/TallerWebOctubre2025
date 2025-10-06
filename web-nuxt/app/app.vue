@@ -1,8 +1,17 @@
-<template>
-  <UApp>
-    <UHeader title="UI" />
+<script setup lang="ts">
+import { es } from "@nuxt/ui/locale";
 
-    <UMain class="bg-gray-200">
+import * as z from "zod";
+import { es as zEs } from "zod/locales";
+
+z.config(zEs());
+</script>
+
+<template>
+  <UApp :locale="es">
+    <MyHeader />
+
+    <UMain class="bg-neutral-200 dark:bg-neutral-950">
       <NuxtLayout>
         <UContainer>
           <NuxtPage />
