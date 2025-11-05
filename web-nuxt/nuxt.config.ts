@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     name: "ELWIWI",
   },
 
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || "http://localhost:3001",
+    },
+  },
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/image",

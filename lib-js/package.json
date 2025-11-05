@@ -1,0 +1,22 @@
+{
+  "name": "lib-js",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "client.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node client.ts"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.0",
+    "@grpc/proto-loader": "^0.8.0",
+    "@types/node": "^24.7.0",
+    "grpc-tools": "^1.13.0",
+    "ts-node": "^10.9.2",
+    "ts-protoc-gen": "^0.15.0",
+    "typescript": "^5.9.3"
+  }
+}

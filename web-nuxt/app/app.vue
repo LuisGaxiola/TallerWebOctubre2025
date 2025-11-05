@@ -5,20 +5,22 @@ import * as z from "zod";
 import { es as zEs } from "zod/locales";
 
 z.config(zEs());
+
+const { fetchUser } = useAuth();
+const token = useCookie("auth_token");
+
+// Fetch user on app mount if token exists
+onMounted(async () => {
+  if (token.value) {
+    await fetchUser();
+  }
+});
 </script>
 
 <template>
   <UApp :locale="es">
-    <MyHeader />
-
-    <UMain class="bg-neutral-200 dark:bg-neutral-950">
-      <NuxtLayout>
-        <UContainer class="flex flex-col items-center justify-center gap-4 p-4">
-          <NuxtPage />
-        </UContainer>
-      </NuxtLayout>
-    </UMain>
-
-    <UFooter> © elwiwi.com 2025 </UFooter>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>

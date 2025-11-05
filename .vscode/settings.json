@@ -8,8 +8,6 @@
     "*.css": "tailwindcss"
   },
   "git.autofetch": true,
-  "workbench.colorTheme": "Material Theme Ocean High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
   "tailwindCSS.classAttributes": ["class", "ui"],
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
