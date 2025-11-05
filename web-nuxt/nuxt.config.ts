@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
+  site: {
+    url: "https://example.com",
+    name: "ELWIWI",
+  },
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/image",

@@ -2,49 +2,30 @@
 import * as z from "zod";
 import type { FormSubmitEvent, AuthFormField } from "@nuxt/ui";
 
-const toast = useToast();
-
 const fields: AuthFormField[] = [
   {
     name: "email",
     type: "email",
     label: "Email",
-    placeholder: "Enter your email",
+    placeholder: "Inserta tu correo electrónico",
     required: true,
   },
   {
     name: "password",
-    label: "Password",
+    label: "Contraseña",
     type: "password",
-    placeholder: "Enter your password",
+    placeholder: "Insterta tu contraseña",
     required: true,
   },
   {
     name: "remember",
-    label: "Remember me",
+    label: "Recordarme",
     type: "checkbox",
   },
 ];
 
-const providers = [
-  {
-    label: "Google",
-    icon: "i-simple-icons-google",
-    onClick: () => {
-      toast.add({ title: "Google", description: "Login with Google" });
-    },
-  },
-  {
-    label: "GitHub",
-    icon: "i-simple-icons-github",
-    onClick: () => {
-      toast.add({ title: "GitHub", description: "Login with GitHub" });
-    },
-  },
-];
-
 const schema = z.object({
-  email: z.email("Correo inválido"),
+  email: z.email("Correo electrónico inválido"),
   password: z
     .string("Se requiere una contraseña")
     .min(8, "Debe ser de al menos 8 caracteres"),
@@ -58,17 +39,13 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center gap-4 p-4">
-    <UPageCard class="w-full max-w-md">
-      <UAuthForm
-        :schema="schema"
-        title="Login"
-        description="Enter your credentials to access your account."
-        icon="i-lucide-user"
-        :fields="fields"
-        :providers="providers"
-        @submit="onSubmit"
-      />
-    </UPageCard>
-  </div>
+  <UPageCard class="w-full max-w-md">
+    <UAuthForm
+      :schema="schema"
+      title="Login"
+      description="Ingresa tus credenciales para continuar."
+      :fields="fields"
+      @submit="onSubmit"
+    />
+  </UPageCard>
 </template>

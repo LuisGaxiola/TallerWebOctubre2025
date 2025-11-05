@@ -1,67 +1,38 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
-
-const route = useRoute();
-
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: "Docs",
-    to: "/docs/getting-started",
-    icon: "i-lucide-book-open",
-    active: route.path.startsWith("/docs/getting-started"),
-  },
-  {
-    label: "Components",
-    to: "/docs/components",
-    icon: "i-lucide-box",
-    active: route.path.startsWith("/docs/components"),
-  },
-  {
-    label: "Figma",
-    icon: "i-simple-icons-figma",
-    to: "https://go.nuxt.com/figma-ui",
-    target: "_blank",
-  },
-  {
-    label: "Releases",
-    icon: "i-lucide-rocket",
-    to: "https://github.com/nuxt/ui/releases",
-    target: "_blank",
-  },
-]);
+const items = ref<string[]>([]);
+const value = ref("");
 </script>
 
 <template>
   <UHeader toggle-side="left">
     <template #title>
       <div class="flex items-center gap-2">
-        <Icon name="majesticons:cheese" class="bg-primary text-4xl" />
-        <div class="flex h-6 w-auto gap-1">
-          <div>My</div>
-          <div class="text-primary">CHESSE</div>
+        <Icon name="lucide-lab:cat-big" class="bg-primary text-4xl" />
+        <div class="flex h-6 w-auto">
+          <div>EL</div>
+          <div class="text-primary">WIWI</div>
         </div>
       </div>
     </template>
 
-    <UNavigationMenu :items="items" />
+    <UInputMenu
+      v-model="value"
+      icon="i-lucide-search"
+      size="md"
+      :items="items"
+    />
 
     <template #right>
       <UColorModeButton />
 
-      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+      <UTooltip text="Acceso al sistema">
         <UButton
-          color="neutral"
-          variant="ghost"
-          to="https://github.com/nuxt/ui"
-          target="_blank"
+          color="primary"
+          label="Acceder"
+          to="/login"
           icon="i-simple-icons-github"
-          aria-label="GitHub"
         />
       </UTooltip>
-    </template>
-
-    <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
 </template>

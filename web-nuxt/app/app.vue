@@ -13,12 +13,12 @@ z.config(zEs());
 
     <UMain class="bg-neutral-200 dark:bg-neutral-950">
       <NuxtLayout>
-        <UContainer>
+        <UContainer class="flex flex-col items-center justify-center gap-4 p-4">
           <NuxtPage />
         </UContainer>
       </NuxtLayout>
     </UMain>
 
-    <UFooter title="UI" />
+    <UFooter> © elwiwi.com 2025 </UFooter>
   </UApp>
 </template>

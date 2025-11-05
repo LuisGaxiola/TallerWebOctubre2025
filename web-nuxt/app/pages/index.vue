@@ -1,5 +1,9 @@
+<script setup>
+definePageMeta({
+  title: "Login",
+});
+</script>
+
 <template>
-  <div>
-    <h1>Hola</h1>
-  </div>
+  <UPageCard class="w-full max-w-md"> Hola </UPageCard>
 </template>
