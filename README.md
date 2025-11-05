@@ -4,8 +4,7 @@
 - Vue.js / Nuxt v4
 - Hono.js
 - Python
-- FastAPI
-- GRPC
+- gRPC
 - PostgreSQL
 - Minio
 - Redis
