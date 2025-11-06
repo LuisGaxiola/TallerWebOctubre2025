@@ -31,7 +31,9 @@
       "console": "integratedTerminal",
       "env": {
         "NUXT_PUBLIC_API_URL": "http://localhost:3001",
-        "NUXT_NO_SOCKET": "true"
+        "NUXT_NO_SOCKET": "true",
+        "NUXT_DEVTOOLS_ENABLED": "false",
+        "NUXT_CLI_FORK": "false"
       }
     },
     {
@@ -64,7 +66,9 @@
       "console": "integratedTerminal",
       "env": {
         "NUXT_PUBLIC_API_URL": "http://localhost:3001",
-        "NUXT_NO_SOCKET": "true"
+        "NUXT_NO_SOCKET": "true",
+        "NUXT_DEVTOOLS_ENABLED": "false",
+        "NUXT_CLI_FORK": "false"
       }
     }
   ],

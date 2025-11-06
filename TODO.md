@@ -16,3 +16,4 @@
 - Mejoras en estilos
 - Branding personal
 - Deploy con NGINX
+- Rehabilitar DevTools
