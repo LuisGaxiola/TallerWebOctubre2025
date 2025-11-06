@@ -12,6 +12,7 @@
   "dependencies": {
     "@iconify/json": "^2.2.392",
     "@nuxt/eslint": "1.9.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxt/scripts": "0.12.1",
     "@nuxt/test-utils": "3.19.2",
     "@nuxt/ui": "4.0.1",
