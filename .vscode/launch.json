@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend (web-hono)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/web-hono",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "env": {
+        "DATABASE_URL": "postgresql://postgres:postgres@localhost:5432/social_network",
+        "REDIS_URL": "redis://localhost:6379",
+        "MINIO_ENDPOINT": "localhost",
+        "MINIO_PORT": "9000",
+        "MINIO_ACCESS_KEY": "minioadmin",
+        "MINIO_SECRET_KEY": "minioadmin",
+        "JWT_SECRET": "your-super-secret-jwt-key-change-in-production",
+        "NODE_ENV": "development",
+        "PORT": "3001"
+      }
+    },
+    {
+      "name": "Frontend (web-nuxt)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/web-nuxt",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "env": {
+        "NUXT_PUBLIC_API_URL": "http://localhost:3001"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "# Full Stack (Backend + Frontend)",
+      "configurations": ["Backend (web-hono)", "Frontend (web-nuxt)"],
+      "stopAll": true
+    }
+  ]
+}
