@@ -62,7 +62,7 @@
       "runtimeArgs": ["run", "dev"],
       "console": "integratedTerminal",
       "env": {
-        "NUXT_PUBLIC_API_URL": "http://20.20.20.249:3001"
+        "NUXT_PUBLIC_API_URL": "http://localhost:3001"
       }
     }
   ],
