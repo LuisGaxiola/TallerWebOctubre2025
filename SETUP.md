@@ -117,7 +117,7 @@ Necesitarás tener PostgreSQL, Redis y Minio instalados localmente o ejecutándo
 
 ```bash
 # Solo los servicios de infraestructura
-docker-compose up -d postgres redis minio
+docker compose up -d postgres redis minio
 ```
 
 ### Paso 2: Configurar backend
