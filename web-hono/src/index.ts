@@ -11,7 +11,7 @@ const app = new Hono();
 app.use(
   "/*",
   cors({
-    origin: ["http://localhost:3000", "http://localhost"],
+    origin: "*",
     credentials: true,
   })
 );
@@ -33,9 +33,10 @@ app.all("/trpc/*", async (c) => {
 
 const port = parseInt(process.env.PORT || "3001");
 
-console.log(`🚀 Server running on http://localhost:${port}`);
+console.log(`🚀 Server running on http://0.0.0.0:${port}`);
 
 serve({
+  hostname: "0.0.0.0",
   fetch: app.fetch,
   port,
 });
